@@ -52,7 +52,7 @@ function sendData(obj, command, method, qs) {
 function loadData() {
 
     if (scrollId == null) {
-        sendData(query, "http://localhost:9202/jobcandidateinteraction/jobcandidateinteraction/_search?scroll=1m", "POST").then(function (response) {
+        sendData(query, "http://192.31.2.61:9200/jobcandidateinteraction/jobcandidateinteraction/_search?scroll=1m", "POST").then(function (response) {
             scrollId = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
@@ -68,7 +68,7 @@ function loadData() {
             "scroll": "1m",
             "scroll_id": scrollId
         }
-        sendData(scrollQuery, "http://localhost:9202/jobcandidateinteraction/jobcandidateinteraction/scroll", "POST").then(function (response) {
+        sendData(scrollQuery, "http://192.31.2.61:9200/jobcandidateinteraction/jobcandidateinteraction/scroll", "POST").then(function (response) {
             scrollId = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {

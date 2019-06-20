@@ -1,0 +1,25 @@
+{
+  "name": "data_migation",
+  "version": "0.0.0",
+  "description": "Application is installed on the legacy wise step app to migrate all the job candidates from the legacy app to th new",
+  "main": "server.js",
+  "dependencies": {
+    "@google/maps": "^0.4.5",
+    "body-parser": "^1.15.2",
+    "errorhandler": "^1.5.0",
+    "express": "^4.14.0",
+    "mssql": "4.1.0",
+    "node-async-loop": "^1.2.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "sqlstring": "^2.3.0",
+    "winston": "^2.3.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": {
+    "name": "balakrishna vundavalli",
+    "email": "balakrishna.v@wisestep-inc.com"
+  }
+}

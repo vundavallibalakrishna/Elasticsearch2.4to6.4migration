@@ -6,6 +6,7 @@ var obj = {
 var scrollId = null;
 
 var query = {
+    "size": 1000,
     "_source": {
         "include": ["clientJobCode", "jobClientRecruiterName", "jobClientRecruiterEmail", "source", "stageDate", "submittedOn", "status", "mappedJobTitle", "currentJobTitle", "currentEmployer", "applicationStage", "applicationState", "jobTags"]
     },

@@ -70,7 +70,7 @@ function loadData() {
         }
         sendData(scrollQuery, "http://192.31.2.61:9200/jobcandidateinteraction/jobcandidateinteraction/scroll", "POST").then(function (response) {
             scrollId = response["_scroll_id"];
-            if (response["hits"]["hits"].length > 0) {
+            if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
                     obj.data.push(hit);
                 });

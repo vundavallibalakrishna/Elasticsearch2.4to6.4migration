@@ -1,0 +1,241 @@
+{
+  "data": [
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "7bc76b80-7194-4bbb-9377-146bf9c9c4cc",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "IACC",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Michelle Lopez",
+        "mappedJobTitle": "Technical Architect Senior",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "milopez@psiint.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "",
+        "applicationStage": "CV Submitted",
+        "jobTags": [
+          "#NYS",
+          "#ACT"
+        ],
+        "clientJobCode": "HBITS-07-06486"
+      },
+      "sort": [
+        1560985894451
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "f866f1e9-4c2a-4918-a42a-13aef4c8f3f2",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "American International Group (AIG)",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Masapeta,Avinash Reddy",
+        "mappedJobTitle": "Technical Manager - ITSM",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "AM00499812@TechMahindra.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "dice",
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560985297343
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "6948ebcf-be20-4759-9220-6efb17c73ec5",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "Cox-Communication",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Praneeta Ojha",
+        "mappedJobTitle": "Java Microservices - Netflix OS",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "praneeta.ojha@polarisft.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": null,
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560984478753
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "9c2801c7-e597-4b8d-afb2-58f6d16788b6",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "Alpha Consuting Technology Inc",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Sanjeev Iyengar",
+        "mappedJobTitle": "Hadoop Data Architect",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "siyengar@virtusa.com",
+        "currentJobTitle": "SENIOR BIG DATA HADOOP/TERDATA/DB2 ARCHITECT/DEV",
+        "stageDate": null,
+        "source": "MonsterUSA",
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560984278393
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "daf67a78-f4fd-4c7a-97a4-522e3eb61dd2",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "HCL America",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Chauhan,Luxman",
+        "mappedJobTitle": "Software Quality Assurance Engineer",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "LC00467789@TechMahindra.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "",
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560983754254
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "e62f1e40-c42e-49b0-a0dc-fbdb9a68771c",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "Canada LNG",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Rita Kapoor",
+        "mappedJobTitle": "SAP PM Consultant",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "rita.kapoor@lntinfotech.com",
+        "currentJobTitle": "SAP PM and Maintenance Management System Specialist",
+        "stageDate": null,
+        "source": "Dice",
+        "applicationStage": "CV Submitted",
+        "jobTags": [
+          "Chevron"
+        ],
+        "clientJobCode": null
+      },
+      "sort": [
+        1560983731063
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "11399099-5717-4073-a55a-9a580656393f",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "dwss",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Rita Kapoor",
+        "mappedJobTitle": "Application Data Architect -- DBA , Data Architect, (SQL Server/ Oracle DB)",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "rita.kapoor@lntinfotech.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "",
+        "applicationStage": "CV Submitted",
+        "jobTags": [
+          "OTIS"
+        ],
+        "clientJobCode": "148353"
+      },
+      "sort": [
+        1560983597803
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "3512c8a0-db03-4f5a-a01e-2fbc59f37b8c",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "DevOps Engineer",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Anil Bachpalle",
+        "mappedJobTitle": "Sr. Devops Engineer -- W2 Position",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "AnilBa@hexaware.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "",
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560982806516
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "44c6aa7a-770c-40d0-8c22-1a4711dcc09c",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "NA",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "Subbalakshmi M",
+        "mappedJobTitle": "Dot Net Developer - RF02088",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "subbalakshmi.m@mphasis.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": "",
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560982723182
+      ]
+    },
+    {
+      "_index": "jobcandidateinteraction_22032019",
+      "_type": "jobcandidateinteraction",
+      "_id": "d5883198-8fc5-4ef6-8c05-ac1450168bda",
+      "_score": null,
+      "_source": {
+        "currentEmployer": "AAMC",
+        "applicationState": "Feedback Pending",
+        "jobClientRecruiterName": "ShankarKarthik",
+        "mappedJobTitle": "Core Java",
+        "submittedOn": 20190619,
+        "jobClientRecruiterEmail": "ShankarKarthik.Nagarathinam@cognizant.com",
+        "currentJobTitle": "",
+        "stageDate": null,
+        "source": null,
+        "applicationStage": "CV Submitted",
+        "jobTags": null,
+        "clientJobCode": null
+      },
+      "sort": [
+        1560982691337
+      ]
+    }
+  ]
+}

@@ -57,8 +57,10 @@ function loadData() {
             scrollId = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
-                    if(hit["jobClientRecruiterEmail"] && hit["jobClientRecruiterEmail"].length > 0)
-                        hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"]);
+                    //if(hit["jobClientRecruiterEmail"] && hit["jobClientRecruiterEmail"].length > 0)
+                    //    hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"]);
+                    if(hit["_source"]["jobClientRecruiterEmail"] && hit["_source"]["jobClientRecruiterEmail"].length > 0)
+                        hit["_source"]["jobClientRecruiterEmail"] = mask(hit["_source"]["jobClientRecruiterEmail"]);
                         obj.data.push(hit);
                 });
                 loadData();
@@ -75,7 +77,10 @@ function loadData() {
             scrollId = response["_scroll_id"];
             if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
-                    hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"])
+		    //if(hit["jobClientRecruiterEmail"] && hit["jobClientRecruiterEmail"].length > 0)
+                    //	hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"])
+                    if(hit["_source"]["jobClientRecruiterEmail"] && hit["_source"]["jobClientRecruiterEmail"].length > 0)
+                        hit["_source"]["jobClientRecruiterEmail"] = mask(hit["_source"]["jobClientRecruiterEmail"]);
                     obj.data.push(hit);
                 });
                 loadData();
@@ -99,7 +104,7 @@ function mask(myemailId){
             maskid = maskid + "*";
         }
     }
-    maskid =maskid +postfix;
+    return maskid +postfix;
 }
 
 function flush() {

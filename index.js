@@ -57,7 +57,9 @@ function loadData() {
             scrollId = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
-                    obj.data.push(hit);
+                    if(hit["jobClientRecruiterEmail"] && hit["jobClientRecruiterEmail"].length > 0)
+                        hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"]);
+                        obj.data.push(hit);
                 });
                 loadData();
             } else {
@@ -73,6 +75,7 @@ function loadData() {
             scrollId = response["_scroll_id"];
             if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
+                    hit["jobClientRecruiterEmail"] = mask(hit["jobClientRecruiterEmail"])
                     obj.data.push(hit);
                 });
                 loadData();
@@ -81,6 +84,22 @@ function loadData() {
             }
         })
     }
+}
+
+function mask(myemailId){
+    var maskid = "";
+    var prefix= myemailId.substring(0, myemailId .lastIndexOf("@"));
+    var postfix= myemailId.substring(myemailId .lastIndexOf("@"));
+
+    for(var i=0; i<prefix.length; i++){
+        if(i == 0 || i == prefix.length - 1) {   ////////
+            maskid = maskid + prefix[i].toString();
+        }
+        else {
+            maskid = maskid + "*";
+        }
+    }
+    maskid =maskid +postfix;
 }
 
 function flush() {

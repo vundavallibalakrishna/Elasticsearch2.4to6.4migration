@@ -114,9 +114,9 @@ function loadCandidateData() {
             scrollId_cand = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
-                    obj.data.push(hit);
+                    candidateObj.data.push(hit);
                 });
-                loadData();
+                loadCandidateData();
             } else {
                 flushCandidate();
             }
@@ -130,9 +130,9 @@ function loadCandidateData() {
             scrollId_cand = response["_scroll_id"];
             if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
-                    obj.data.push(hit);
+                    candidateObj.data.push(hit);
                 });
-                loadData();
+                loadCandidateData();
             } else {
                 flushCandidate();
             }
@@ -148,7 +148,7 @@ function loadJobData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     jobObj.data.push(hit);
                 });
-                loadData();
+                loadJobData();
             } else {
                 flushJob();
             }
@@ -164,7 +164,7 @@ function loadJobData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     jobObj.data.push(hit);
                 });
-                loadData();
+                loadJobData();
             } else {
                 flushJob();
             }
@@ -180,7 +180,7 @@ function loadRecruiterData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     recruiterObj.data.push(hit);
                 });
-                loadData();
+                loadRecruiterData();
             } else {
                 flushRecruiter();
             }
@@ -196,7 +196,7 @@ function loadRecruiterData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     recruiterObj.data.push(hit);
                 });
-                loadData();
+                loadRecruiterData();
             } else {
                 flushRecruiter();
             }

@@ -121,6 +121,7 @@ async function createMappings() {
         delete json24[indexname24].settings.creation_date;
         delete json24[indexname24].settings.uuid;
         delete json24[indexname24].settings.routing;
+        delete json24[indexname24].settings.version;
 
         delete json24[indexname24].aliases;
         console.log("Creating index " + indexname24);

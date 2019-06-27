@@ -18,6 +18,10 @@ npm-debug.log.*
 ######################
 .sass-cache/
 
+2.4/*.json
+5.0-upgraded/*
+spring-boot/*
+
 ######################
 # Eclipse
 ######################

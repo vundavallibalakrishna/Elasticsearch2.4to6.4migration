@@ -233,6 +233,6 @@ function flushRecruiter() {
 }
 
 loadCandidateData();
-loadJobData();
-loadRecruiterData();
+//loadJobData();
+//loadRecruiterData();
 

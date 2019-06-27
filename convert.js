@@ -1,7 +1,7 @@
 const fs = require('fs');
 const rp = require('request-promise');
 
-const ES_24_IP = "http://localhost:9200/";
+const ES_24_IP = "http://192.31.254.21:9200/";
 const ES_64_IP = "http://localhost:9200/";
 
 const migrationsIndex = {

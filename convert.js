@@ -156,18 +156,18 @@ async function reindexTheData() {
         console.log(migration);
         var migrationStep = {
             "source": {
+                "remote": {
+                    "host": ES_24_IP,
+                },
                 "index": migration.sourceIndex,
                 "type": migration.sourceType
             },
             "dest": {
-                "remote": {
-                    "host": ES_64_IP,
-                },
                 "index": migration.destinationIndex,
                 "type": migration.destinationType
             }
         };
-        var response = await sendData(migrationStep, ES_24_IP + "_reindex?wait_for_completion=true&pretty=true", "POST");
+        var response = await sendData(migrationStep, ES_64_IP + "_reindex?wait_for_completion=true&pretty=true", "POST");
         console.log(response);
     }
 }

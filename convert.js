@@ -136,7 +136,7 @@ async function createMappings() {
         }
     }
 
-    reindexTheData();
+    //reindexTheData();
 
 }
 
@@ -156,9 +156,6 @@ async function reindexTheData() {
         console.log(migration);
         var migrationStep = {
             "source": {
-                "remote": {
-                    "host": ES_24_IP,
-                },
                 "index": migration.sourceIndex,
                 "type": migration.sourceType
             },
@@ -175,4 +172,5 @@ async function reindexTheData() {
     }
 }
 
-start();
+//start();
+reindexTheData();

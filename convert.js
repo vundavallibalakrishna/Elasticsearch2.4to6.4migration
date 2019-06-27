@@ -136,7 +136,7 @@ async function createMappings() {
         }
     }
 
-    //reindexTheData();
+    reindexTheData();
 
 }
 
@@ -172,5 +172,5 @@ async function reindexTheData() {
     }
 }
 
-//start();
-reindexTheData();
+start();
+//reindexTheData();

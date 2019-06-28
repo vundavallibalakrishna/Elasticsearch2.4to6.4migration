@@ -141,7 +141,7 @@ async function createMappings() {
 }
 
 async function reindexTheData() {
-    var step_1 = {
+    /*var step_1 = {
         "persistent": {
             "cluster.routing.allocation.enable": "all"
         }
@@ -149,7 +149,7 @@ async function reindexTheData() {
     var response = await sendData(step_1, ES_24_IP + "_cluster/settings", "PUT");
     console.log(response);
     var response = await sendData(step_1, ES_24_IP + "_cat/recovery", "GET");
-    console.log(response);
+    console.log(response);*/
     for (var i in migrationsIndex.list) {
         var migration = migrationsIndex.list[i];
         console.log("Migrating");
@@ -167,8 +167,8 @@ async function reindexTheData() {
                 "type": migration.destinationType
             }
         };
-        var response = await sendData(migrationStep, ES_64_IP + "_reindex?wait_for_completion=true&pretty=true", "POST");
-        console.log(response);
+        console.log(migrationStep);
+        //var response = await sendData(migrationStep, ES_64_IP + "_reindex?wait_for_completion=true&pretty=true", "POST");
     }
 }
 

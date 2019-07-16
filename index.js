@@ -126,9 +126,10 @@ function loadCandidateData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     candidateObj.data.push(hit);
                 });
+                flushCandidate();
                 loadCandidateData();
             } else {
-                flushCandidate();
+                //flushCandidate();
             }
         })
     } else {
@@ -142,9 +143,10 @@ function loadCandidateData() {
                 response["hits"]["hits"].forEach(function (hit) {
                     candidateObj.data.push(hit);
                 });
+                flushCandidate();
                 loadCandidateData();
             } else {
-                flushCandidate();
+                //flushCandidate();
             }
         })
     }
@@ -232,6 +234,9 @@ function mask(myemailId) {
 
 function flushCandidate() {
     fs.writeFileSync('results-candidate-' + (new Date()).getTime() + '.json', JSON.stringify(candidateObj, null, 2), 'utf-8');
+    candidateObj = {
+        data: []
+    }
 }
 
 function flushJob() {

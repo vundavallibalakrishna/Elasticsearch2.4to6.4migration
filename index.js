@@ -15,6 +15,8 @@ var scrollId_job = null;
 
 var scrollId_recruter = null;
 
+const IP = "localhost:9200"
+
 var candidateQuery = {
     "size": 1000,
     "_source": {
@@ -34,7 +36,15 @@ var candidateQuery = {
                 {
                     "bool": {
                         "should": [
-                            { "missing": { "field": "isJobCandidateMapping" } },
+                            {
+                                "bool": {
+                                    "must_not": {
+                                        "exists": {
+                                            "field": "isJobCandidateMapping"
+                                        }
+                                    }
+                                }
+                            },
                             { "match": { "isJobCandidateMapping": false } }
                         ]
                     }
@@ -110,7 +120,7 @@ function sendData(obj, command, method, qs) {
 
 function loadCandidateData() {
     if (scrollId_cand == null) {
-        sendData(candidateQuery, "http://192.31.2.61:9200/jobcandidateinteraction/jobcandidateinteraction/_search?scroll=1m", "POST").then(function (response) {
+        sendData(candidateQuery, "http://" + IP + "/jobcandidateinteraction/jobcandidateinteraction/_search?scroll=1m", "POST").then(function (response) {
             scrollId_cand = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
@@ -126,7 +136,7 @@ function loadCandidateData() {
             "scroll": "1m",
             "scroll_id": scrollId_cand
         }
-        sendData(scrollQuery, "http://192.31.2.61:9200/_search/scroll", "POST").then(function (response) {
+        sendData(scrollQuery, "http://" + IP + "/_search/scroll", "POST").then(function (response) {
             scrollId_cand = response["_scroll_id"];
             if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
@@ -142,7 +152,7 @@ function loadCandidateData() {
 
 function loadJobData() {
     if (scrollId_job == null) {
-        sendData(jobQuery, "http://192.31.2.61:9200/job/job/_search?scroll=1m", "POST").then(function (response) {
+        sendData(jobQuery, "http://" + IP + "/job/job/_search?scroll=1m", "POST").then(function (response) {
             scrollId_job = response["_scroll_id"];
             if (response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {
@@ -158,7 +168,7 @@ function loadJobData() {
             "scroll": "1m",
             "scroll_id": scrollId_job
         }
-        sendData(scrollQuery, "http://192.31.2.61:9200/_search/scroll", "POST").then(function (response) {
+        sendData(scrollQuery, "http://" + IP + "/_search/scroll", "POST").then(function (response) {
             scrollId_job = response["_scroll_id"];
             if (response["hits"] && response["hits"]["hits"] && response["hits"]["hits"].length > 0) {
                 response["hits"]["hits"].forEach(function (hit) {

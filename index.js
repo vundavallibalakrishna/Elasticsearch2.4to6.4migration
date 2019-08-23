@@ -20,7 +20,7 @@ const IP = "localhost:9200"
 var candidateQuery = {
     "size": 1000,
     "_source": {
-        "exclude": ["recruiterId", "name", "email", "alternateEmails", "phoneNumber", "alternatePhoneNumbers", "candidateResume.*", "otherDocuments.*", "rtrFileOriginalName", "rtrFileLocation", "createdBy", "modifiedBy", "messengers.*", "linkedInURL", "jobAccountManagerEmail", "jobClientRecruiterEmail", "jobPostedByTeam.ownerEmail", "jobPostedByRecruiterEmail", "jobWorkAssignment.*", "team.ownerEmail", "contactActionsObjs.createdByEmail", "contactActionsObjs.result.createdByEmail", "candidateTasks.*", "mappedCandidateResumes.*", "profileURLs"],
+        "exclude": ["recruiterId", "name", "email", "alternateEmails", "phoneNumber", "alternatePhoneNumbers", "candidateResume.*", "otherDocuments.*", "rtrFileOriginalName", "rtrFileLocation", "createdBy", "modifiedBy", "messengers.*", "linkedInURL", "jobWorkAssignment.*", "team.ownerEmail", "candidateTasks.*", "mappedCandidateResumes.*", "profileURLs"],
     },
     "query": {
         "bool": {
@@ -28,27 +28,28 @@ var candidateQuery = {
                 {
                     "range": {
                         "createdOn": {
-                            "gte": "20/06/2018",
+                            "gte": "20/07/2018",
                             "format": "dd/MM/yyyy"
                         }
                     }
-                },
-                {
-                    "bool": {
-                        "should": [
-                            {
-                                "bool": {
-                                    "must_not": {
-                                        "exists": {
-                                            "field": "isJobCandidateMapping"
-                                        }
-                                    }
-                                }
-                            },
-                            { "match": { "isJobCandidateMapping": false } }
-                        ]
-                    }
                 }
+                //,
+                // {
+                //     "bool": {
+                //         "should": [
+                //             {
+                //                 "bool": {
+                //                     "must_not": {
+                //                         "exists": {
+                //                             "field": "isJobCandidateMapping"
+                //                         }
+                //                     }
+                //                 }
+                //             },
+                //             { "match": { "isJobCandidateMapping": false } }
+                //         ]
+                //     }
+                // }
             ]
         }
     },
@@ -127,7 +128,7 @@ function loadCandidateData() {
                     candidateObj.data.push(hit);
                 });
                 flushCandidate();
-                loadCandidateData();
+                //loadCandidateData();
             } else {
                 //flushCandidate();
             }

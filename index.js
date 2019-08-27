@@ -20,7 +20,7 @@ const IP = "localhost:9200"
 var candidateQuery = {
     "size": 1000,
     "_source": {
-        "exclude": ["recruiterId", "name", "email", "alternateEmails", "phoneNumber", "alternatePhoneNumbers", "candidateResume.*", "otherDocuments.*", "rtrFileOriginalName", "rtrFileLocation", "createdBy", "modifiedBy", "messengers.*", "linkedInURL", "jobWorkAssignment.*", "team.ownerEmail", "candidateTasks.*", "mappedCandidateResumes.*", "profileURLs"],
+        "exclude": ["recruiterId", "name", "email", "alternateEmails", "phoneNumber", "alternatePhoneNumbers", "candidateResume.*", "otherDocuments.*", "rtrFileOriginalName", "rtrFileLocation", "createdBy", "modifiedBy", "messengers.*", "linkedInURL", "jobWorkAssignment.*", "team.ownerEmail", "mappedCandidateResumes.*", "profileURLs"],
     },
     "query": {
         "bool": {
